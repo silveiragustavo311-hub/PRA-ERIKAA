@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor Eterno</title>
+    <meta name="description" content="Um site romântico para expressar seus sentimentos mais profundos">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'romantic-pink': '#f8b4d9',
+                        'romantic-red': '#e11d48',
+                        'romantic-rose': '#fecdd3',
+                        'romantic-purple': '#c084fc',
+                        'romantic-gold': '#fbbf24',
+                    },
+                    fontFamily: {
+                        'dancing': ['Dancing Script', 'cursive'],
+                        'playfair': ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-heart': 'pulse-heart 2s ease-in-out infinite',
+                        'fade-in': 'fade-in 1.5s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-heart': {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                        },
+                        'fade-in': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            min-height: 100vh;
+        }
+        .heart-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,85 C30,70 15,55 15,35 C15,20 25,10 40,10 C50,10 55,15 50,25 C45,15 50,10 60,10 C75,10 85,20 85,35 C85,55 70,70 50,85 Z' fill='%23f8b4d9' opacity='0.1'/%3E%3C/svg%3E");
+            background-size: 150px;
+        }
+        .romantic-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(248, 180, 217, 0.3);
+            box-shadow: 0 10px 30px rgba(225, 29, 72, 0.1);
+        }
+        .text-shadow-romantic {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="heart-bg min-h-screen flex flex-col">
+    <div id="home-page" class="flex flex-col items-center justify-center min-h-screen p-6">
+        <header class="text-center mb-12 animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-dancing text-romantic-red mb-4 text-shadow-romantic">
+                Amor Eterno
+            </h1>
+            <p class="text-xl md:text-2xl font-playfair text-gray-700 max-w-2xl">
+                Um lugar especial para guardar os sentimentos mais bonitos do coração
+            </p>
+        </header>
+
+        <main class="w-full max-w-4xl">
+            <div class="romantic-card rounded-3xl p-8 md:p-12 mb-12 animate-fade-in">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-playfair text-romantic-red mb-6">
+                            Para alguém especial
+                        </h2>
+                        <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                            Às vezes, palavras escritas carregam mais emoção do que as ditas. 
+                            Aqui você pode criar uma mensagem única, cheia de amor e carinho, 
+                            para aquela pessoa que ilumina seus dias.
+                        </p>
+                        
+                        <div class="space-y-6 mb-10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-romantic-rose flex items-center justify-center">
+                                    <i class="fas fa-heart text-romantic-red"></i>
+                                </div>
+                                <p class="text-gray-700">Mensagens personalizadas do coração</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-romantic-rose flex items-center justify-center">
+                                    <i class="fas fa-star text-romantic-gold"></i>
+                                </div>
+                                <p class="text-gray-700">Design romântico e acolhedor</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-romantic-rose flex items-center justify-center">
+                                    <i class="fas fa-feather-alt text-romantic-purple"></i>
+                                </div>
+                                <p class="text-gray-700">Escreva com toda a sua inspiração</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 flex flex-col items-center">
+                        <div class="relative mb-8">
+                            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-romantic-pink to-romantic-red flex items-center justify-center animate-pulse-heart">
+                                <i class="fas fa-heart text-white text-8xl"></i>
+                            </div>
+                            <div class="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-romantic-gold flex items-center justify-center animate-float">
+                                <i class="fas fa-star text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-romantic-purple flex items-center justify-center animate-float" style="animation-delay: 1s;">
+                                <i class="fas fa-feather-alt text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        
+                        <button id="go-to-message-btn" class="px-10 py-4 bg-gradient-to-r from-romantic-red to-romantic-pink text-white text-xl font-playfair rounded-full hover:from-romantic-pink hover:to-romantic-red transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3">
+                            <i class="fas fa-pen-fancy"></i>
+                            Escrever Minha Mensagem
+                        </button>
+                        
+                        <p class="text-gray-600 mt-4 text-center">
+                            Clique no botão para criar sua mensagem especial
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-2xl font-playfair text-romantic-red mb-8">
+                    Palavras que inspiram amor
+                </h3>
+                <div id="love-quotes" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"></div>
+            </div>
+        </main>
+
+        <footer class="mt-12 text-center text-gray-600">
+            <p class="mb-2">Feito com <i class="fas fa-heart text-romantic-red mx-1"></i> para expressar sentimentos verdadeiros</p>
+            <p class="text-sm">© Todos os direitos, reservados à Erika</p>
+        </footer>
+    </div>
+
+    <div id="message-page" class="hidden flex-col items-center justify-center min-h-screen p-6">
+        <header class="text-center mb-8">
+            <button id="back-to-home" class="absolute top-6 left-6 px-6 py-2 bg-romantic-rose text-romantic-red rounded-full hover:bg-romantic-pink transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i>
+                Voltar
+            </button>
+            
+            <h1 class="text-5xl md:text-6xl font-dancing text-romantic-red mb-4 text-shadow-romantic">
+                Sua Mensagem Especial
+            </h1>
+            <p class="text-xl font-playfair text-gray-700">
+                Escreva do fundo do seu coração
+            </p>
+        </header>
+
+        <main class="w-full max-w-4xl">
+            <div class="romantic-card rounded-3xl p-8 md:p-12 mb-8">
+                <div class="mb-10 text-center">
+                    <div class="inline-block p-4 rounded-2xl bg-romantic-rose mb-6">
+                        <i class="fas fa-heart text-romantic-red text-4xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-playfair text-romantic-red mb-4">
+                        Para quem é esta mensagem?
+                    </h2>
+                    <div class="max-w-md mx-auto">
+                        <input type="text" id="recipient-name" placeholder="Nome da pessoa especial" class="w-full px-6 py-4 rounded-full border-2 border-romantic-pink focus:border-romantic-red focus:outline-none text-center text-xl font-playfair placeholder-gray-400">
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-2xl font-playfair text-romantic-red mb-6 text-center">
+                        Sua mensagem de amor
+                    </h3>
+                    <div class="relative">
+                        <textarea id="love-message" rows="12" placeholder="Escreva aqui sua mensagem mais bonita... Digite tudo o que sente no coração. Pode ser um poema, uma declaração, ou simplesmente palavras carinhosas." class="w-full px-8 py-6 rounded-3xl border-2 border-romantic-pink focus:border-romantic-red focus:outline-none text-lg font-playfair placeholder-gray-400 resize-none romantic-card"></textarea>
+                        <div class="absolute bottom-4 right-4 text-gray-500">
+                            <i class="fas fa-pen-alt"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-4 px-2">
+                        <div class="text-gray-500 text-sm">
+                            <i class="fas fa-lightbulb mr-1"></i>
+                            Dica: Seja sincero e escreva com o coração
+                        </div>
+                        <div id="char-count" class="text-gray-500">
+                            0 caracteres
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-2xl font-playfair text-romantic-red mb-6 text-center">
+                        Escolha o estilo da sua mensagem
+                    </h3>
+                    <div id="style-options" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+                </div>
+
+                <div class="text-center">
+                    <button id="preview-message" class="px-10 py-4 bg-gradient-to-r from-romantic-purple to-romantic-pink text-white text-xl font-playfair rounded-full hover:from-romantic-pink hover:to-romantic-purple transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto mb-6">
+                        <i class="fas fa-eye"></i>
+                        Visualizar Minha Mensagem
+                    </button>
+                    
+                    <p class="text-gray-600">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Sua mensagem será exibida em uma linda apresentação
+                    </p>
+                </div>
+            </div>
+
+            <div id="message-preview" class="romantic-card rounded-3xl p-8 md:p-12 hidden">
+                <div class="text-center mb-8">
+                    <div class="inline-block p-3 rounded-full bg-romantic-rose mb-4">
+                        <i class="fas fa-scroll text-romantic-red text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-playfair text-romantic-red">
+                        Pré-visualização da Mensagem
+                    </h2>
+                </div>
+                
+                <div id="preview-content" class="text-center p-8 rounded-2xl bg-gradient-to-br from-romantic-rose to-white border-2 border-romantic-pink">
+                    <div class="mb-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-romantic-pink text-romantic-red">
+                            <i class="fas fa-heart"></i>
+                            <span id="preview-recipient">Para alguém especial</span>
+                        </div>
+                    </div>
+                    
+                    <div id="preview-text" class="text-2xl font-dancing text-gray-800 leading-relaxed min-h-[200px] flex items-center justify-center">
+                        Sua mensagem aparecerá aqui...
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-romantic-pink">
+                        <p class="text-gray-600 font-playfair">
+                            Com todo o carinho do coração
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <button id="edit-message" class="px-8 py-3 bg-romantic-rose text-romantic-red rounded-full hover:bg-romantic-pink transition-colors duration-300 flex items-center gap-2">
+                        <i class="fas fa-edit"></i>
+                        Editar Mensagem
+                    </button>
+                    <button id="share-message" class="px-8 py-3 bg-gradient-to-r from-romantic-red to-romantic-pink text-white rounded-full hover:from-romantic-pink hover:to-romantic-red transition-all duration-300 flex items-center gap-2">
+                        <i class="fas fa-share-alt"></i>
+                        Mandar pro melhor namorado do mundo:
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-12 text-center text-gray-600">
+            <p>PARA MINHA QUERIDA ERIKA</p>
+            <p class="text-sm mt-2">© GUSTAVO PARA ERIKA</p>
+        </footer>
+    </div>
+
+    <script>
+        // Camada de dados
+        const loveQuotes = [
+            { 
+                "text": "O amor não se vê com os olhos, mas com o coração.", 
+                "author": "William Shakespeare",
+                "icon": "fas fa-heart"
+            },
+            { 
+                "text": "Amar não é olhar um para o outro, é olhar juntos na mesma direção.", 
+                "author": "Antoine de Saint-Exupéry",
+                "icon": "fas fa-dove"
+            },
+            { 
+                "text": "O amor é a única força capaz de transformar um inimigo em amigo.", 
+                "author": "Martin Luther King",
+                "icon": "fas fa-peace"
+            }
+        ];
+
+        const styleOptions = [
+            { 
+                "id": "romantic", 
+                "name": "Romântico", 
+                "icon": "fas fa-heart", 
+                "color": "from-romantic-red to-romantic-pink",
+                "textColor": "text-romantic-red"
+            },
+            { 
+                "id": "poetic", 
+                "name": "Poético", 
+                "icon": "fas fa-feather-alt", 
+                "color": "from-romantic-purple to-romantic-pink",
+                "textColor": "text-romantic-purple"
+            },
+            { 
+                "id": "classic", 
+                "name": "Clássico", 
+                "icon": "fas fa-crown", 
+                "color": "from-romantic-gold to-romantic-red",
+                "textColor": "text-romantic-gold"
+            },
+            { 
+                "id": "simple", 
+                "name": "Simples", 
+                "icon": "fas fa-star", 
+                "color": "from-gray-400 to-romantic-rose",
+                "textColor": "text-gray-600"
+            }
+        ];
+
+        // Funções de renderização reutilizáveis
+        function renderLoveQuotes(quotes) {
+            return quotes.map(quote => `
+                <div class="romantic-card rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 rounded-full bg-romantic-rose flex items-center justify-center mx-auto mb-4">
+                        <i class="${quote.icon} text-romantic-red text-2xl"></i>
+                    </div>
+                    <p class="text-gray-700 italic text-lg mb-4">"${quote.text}"</p>
+                    <p class="text-romantic-red font-playfair">— ${quote.author}</p>
+                </div>
+            `).join("");
+        }
+
+        function renderStyleOptions(options) {
+            return options.map(option => `
+                <div class="style-option cursor-pointer">
+                    <div class="rounded-2xl p-6 text-center border-2 border-transparent hover:border-romantic-pink transition-all duration-300">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br ${option.color} flex items-center justify-center mx-auto mb-4">
+                            <i class="${option.icon} text-white text-3xl"></i>
+                        </div>
+                        <h4 class="${option.textColor} font-playfair text-xl">${option.name}</h4>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        // Inicialização da página
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('love-quotes').innerHTML = renderLoveQuotes(loveQuotes);
+            document.getElementById('style-options').innerHTML = renderStyleOptions(styleOptions);
+            
+            const homePage = document.getElementById('home-page');
+            const messagePage = document.getElementById('message-page');
+            const goToMessageBtn = document.getElementById('go-to-message-btn');
+            const backToHomeBtn = document.getElementById('back-to-home');
+            
+            goToMessageBtn.addEventListener('click', function() {
+                homePage.classList.add('hidden');
+                messagePage.classList.remove('hidden');
+                document.title = "Escrever Mensagem | Amor Eterno";
+            });
+            
+            backToHomeBtn.addEventListener('click', function() {
+                messagePage.classList.add('hidden');
+                homePage.classList.remove('hidden');
+                document.title = "Amor Eterno";
+            });
+            
+            const messageTextarea = document.getElementById('love-message');
+            const charCount = document.getElementById('char-count');
+            
+            messageTextarea.addEventListener('input', function() {
+                const count = this.value.length;
+                charCount.textContent = `${count} caracteres`;
+                if (count > 1000) charCount.classList.add('text-romantic-red');
+                else charCount.classList.remove('text-romantic-red');
+            });
+            
+            const styleOptionElements = document.querySelectorAll('.style-option');
+            let selectedStyle = 'romantic';
+            
+            styleOptionElements.forEach((option, index) => {
+                option.addEventListener('click', function() {
+                    styleOptionElements.forEach(opt => {
+                        opt.querySelector('div').classList.remove('border-romantic-red', 'ring-2', 'ring-romantic-pink');
+                    });
+                    this.querySelector('div').classList.add('border-romantic-red', 'ring-2', 'ring-romantic-pink');
+                    selectedStyle = styleOptions[index].id;
+                });
+            });
+            
+            if (styleOptionElements.length > 0) {
+                styleOptionElements[0].querySelector('div').classList.add('border-romantic-red', 'ring-2', 'ring-romantic-pink');
+            }
+            
+            const previewBtn = document.getElementById('preview-message');
+            const previewSection = document.getElementById('message-preview');
+            const previewRecipient = document.getElementById('preview-recipient');
+            const previewText = document.getElementById('preview-text');
+            const editMessageBtn = document.getElementById('edit-message');
+            
+            previewBtn.addEventListener('click', function() {
+                const recipient = document.getElementById('recipient-name').value || 'Alguém Especial';
+                const message = document.getElementById('love-message').value || 'Escreva sua mensagem especial acima...';
+                
+                previewRecipient.textContent = `Para ${recipient}`;
+                previewText.textContent = message;
+                
+                const selectedOption = styleOptions.find(opt => opt.id === selectedStyle);
+                if (selectedOption) {
+                    previewText.className = `text-2xl font-dancing text-gray-800 leading-relaxed min-h-[200px] flex items-center justify-center ${selectedOption.textColor}`;
+                }
+                
+                previewSection.classList.remove('hidden');
+                previewSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            
+            editMessageBtn.addEventListener('click', function() {
+                previewSection.classList.add('hidden');
+                document.getElementById('love-message').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            
+            // FUNÇÃO DE COMPARTILHAMENTO ATUALIZADA
+            document.getElementById('share-message').addEventListener('click', async function() {
+                const recipient = document.getElementById('recipient-name').value || 'Melhor Namorado';
+                const message = document.getElementById('love-message').value || 'Fiz um site especial para você!';
+                
+                const shareData = {
+                    title: 'Amor Eterno',
+                    text: `Para: ${recipient}\n\n${message}\n\nVeja no site:`,
+                    url: window.location.href
+                };
+
+                try {
+                    if (navigator.share) {
+                        await navigator.share(shareData);
+                    } else {
+                        // Backup para navegadores que não suportam (copia o texto)
+                        const fullText = `${shareData.text} ${shareData.url}`;
+                        await navigator.clipboard.writeText(fullText);
+                        alert('Link e mensagem copiados! Agora é só colar para ele. ❤️');
+                    }
+                } catch (err) {
+                    console.log('Erro ao compartilhar:', err);
+                }
+            });
+            
+            document.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A' && event.target.getAttribute('href') && event.target.getAttribute('href').startsWith('#')) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
